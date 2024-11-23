@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Workspace 01
+        </title>
+        <!-- <style>
+            .btn{
+                padding: 0px 50px 0px 50px;
+                padding-inline: 50px; /* padding ด้านซ้าย ด้านขวา */ 
+                padding-block: 200px; /* padding ด้านบน ด้านล่าง */ 
+                /*color: chartreuse;*/
+            }
+
+            .right{
+                /* margin-left: 50px; */ 
+            }
+            .left{
+               /* margin-right: 50px; */ 
+               margin-inline: 50px;  /*margin ซ้าย ขาว*/
+                 border:  10px red solid; 
+                 border-radius: 10px ; 
+            }
+
+            .btn-1{
+                color: red !important; /* ให้เลือกตัวนี้เป็นลำดับแรก */
+            }
+
+            .btn-1{
+                color:  green; /*show this code*/
+            }
+
+        </style> -->
+
+        <style>
+            body{
+                height: 200vh;
+                /* หน่วย vh */ 
+                width: 100vw;  
+                /* หน่วย vw */
+                margin: 0;
+                /* margin: 0; */
+            }
+                .test{
+                     background-color: red;  
+                     padding: 10px;
+                }
+
+                .button-group-1{
+                    
+                    display: flex;
+                    /* justify-content: center;
+                    align-items: center;
+                    height: 100% */
+                }
+
+                .btn1{
+                    position: fixed; /*absolute ถอด กรอบออกให้ไม่มัอยู่จริง*/
+                    left: 10px;
+                }
+
+                .zindex {
+                    z-index: 10;
+                }
+
+
+        </style>
+    </head>
+
+    <body>
+        <!-- <button class="btn left btn-1">Left</button>
+        <button class="btn right">Right</button> -->
+
+        <div class="button-group-1 test">
+            <input class="btn-1 z-index" type="button" value="button01">
+            <input class="btn-2" type="button" value="button01">
+            <p>asdasdasd</p>
+        </div>
+    </body>
+</html>

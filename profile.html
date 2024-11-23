@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 3rem;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .profile-header img {
+            border-radius: 25%;
+            height: 150px;
+            width: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .profile-header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            font-style: italic;
+        }
+
+        .profile-text p{
+            font-weight: lighter;
+            font-size: 0.8rem;
+        }
+        .profile-details {
+            margin: 20px 0;
+        }
+
+        .profile-details h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .profile-details p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0077b5;
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        .grid {
+            margin-block: 1rem;
+        }
+
+        .grid-double {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.5rem;
+        }
+
+        .powerscale-main {
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 20px;
+            width: 150%;
+            max-width: 300px;
+
+        }
+
+        .powerscale-80 {
+            background: #0077b5;
+            width: 80%;
+            height: 100%;
+        }
+
+        .powerscale-50 {
+            background: #0077b5;
+            width: 50%;
+            height: 100%;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="profile-header grid grid-double">
+            <img src="profile.jpg" alt="Profile Picture">
+            <div class="profile-text">
+                <h1>Sanpitch Phuvapaisankit</h1>
+                <p>Faculty of Liberal Arts & Science Kasetsart University</p>
+                <p>สาขาวิชาเทคโนโลยีสารสนเทศ มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน </p>
+            </div>
+        </div>
+
+        <div class="grid grid-double">
+            <div class="profile-details">
+                <h2>Personal Profile</h2>
+                <p><strong>NAME:</strong> Sanpitch Phuvapaisankit</p>
+                <p><strong>AGE:</strong> 22 Years</p>
+                <p><strong>ADDRESS:</strong> Bangkok, Thailand</p>
+            </div>
+
+            <div>
+                <div>
+                    <h4>Power Scale</h4>
+
+                    <div>
+                        <div class="powerscale-main">
+                            <div class="powerscale-80""></div>
+                        </div>
+                        <p>html: 80%</p> 
+                    </div>
+
+                    <div>
+                        <div class="powerscale-main">
+                            <div class="powerscale-50"></div>
+                        </div>
+                        <p>css: 50%</p> 
+                    </div>
+
+
+                </div>
+                
+                <div>
+                    <h4>hobbies </h4>
+                    <p>photogry, playgames, drug</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class=" social-links">
+                                <h2>Connect with me:</h2>
+                                <a href="https://facebook.com" target="_blank">Facebook</a>
+                                <a href="https://instagram.com" target="_blank">Instagram</a>
+                            </div>
+                        </div>
+</body>
+
+</html>

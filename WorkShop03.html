@@ -1,0 +1,157 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        background-color: beige;
+    }
+
+    .main {
+        s
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .boxing01 {
+        border-radius: 30px;
+        height: 300px;
+        background-color: gray;
+        width: 100%;
+        margin-top: 20px;
+        overflow: hidden;
+        /*ให้ทุกอย่างที่อยู่ในกล่องนี้แสดงอยุ่ในกรอบที่กำหนดเท่านั้น*/
+        display: flex;
+    }
+
+    .boxing02 {
+        border-radius: 30px;
+        height: 600px;
+        background-color: red;
+        width: 50%;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    .boxing03 {
+        /*boxing04-05*/
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    .boxing04 {
+        border-radius: 30px;
+        height: 290px;
+        background-color: red;
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+
+    .boxing05 {
+        border-radius: 30px;
+        height: 290px;
+        background-color: red;
+        width: 100%;
+    }
+
+    .boxing06 {
+        border-radius: 30px;
+        height: 300px;
+        background-color: gray;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .boxingimage {
+        width: 15%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        /*จัดรูปแบบ แนวนอน*/
+        align-items: center;
+        /*จัดรูปแบบ แนวตั้ง*/
+    }
+
+    .boxingContent {
+        width: 35%;
+        display: flex; 
+        justify-content: center;  
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="boxing01"> <!--css boxing1 is NavBar-->
+
+            <div class="boxingimage">
+                <img src="profile.jpg" alt="fifaPic" style="width: 200px; height: 200px; border-radius: 10%;">
+            </div>
+            <div class="boxingContent">
+                <div>
+                    <h1>Sanpitch Phuvapaisankit</h1>
+                    <p>Faculty of Liberal Arts & Science Kasetsart University <br>
+                        สาขาวิชาเทคโนโลยีสารสนเทศ มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตกำแพงแสน</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="content">
+            <div class="boxing02">
+                <div class="profile-details">
+                    <h2>Personal Profile</h2>
+                    <p><strong>NAME:</strong> Sanpitch Phuvapaisankit</p>
+                    <p><strong>AGE:</strong> 22 Years</p>
+                    <p><strong>ADDRESS:</strong> Bangkok, Thailand</p>
+                </div>
+            </div>
+            <div class="boxing03">
+                <div class="boxing04">
+                    <!-- <div>
+                        <h4>Power Scale</h4>
+                        <div>
+                            <div class="powerscale-main">
+                                <div class="powerscale-80""></div>
+                            </div>
+                            <p>html: 80%</p> 
+                        </div>
+    
+                        <div>
+                            <div class="powerscale-main">
+                                <div class="powerscale-50"></div>
+                            </div>
+                            <p>css: 50%</p> 
+                        </div>
+                    </div> -->
+                </div>
+                <div class="boxing05">
+                    <div style="display: flex; justify-content: center; align-content: center;">
+                        <div>
+                        <h4>hobbies </h4>
+                        <p>photogry, playgames, drug</p>
+                        <p>DoSomeThing Bra Bra</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="boxing06"> <!--css boxing1 is Footer-->
+            <div>
+                <h2>Connect with me:</h2>
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>

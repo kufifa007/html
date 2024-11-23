@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Dashboard</title>
+    <style>
+
+      
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            background-color: #2600ff;
+            color: white;
+        }
+        .table-container {
+            width: 100%;
+            overflow-x: scroll; /* ทำให้เลื่อนในแนวนอนได้ */
+            margin: 20px 0;
+           
+           
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+           
+        }
+        th {
+            background-color: #2600ff;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+    </style>
+
+</head>
+<body style="background-image: url(https://www.silpa-mag.com/wp-content/uploads/2023/05/dog-4372036_1280.jpg);">
+    <h1>Student Grade Dashboard</h1>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Math</th>
+                    <th>Science</th>
+                    <th>English</th>
+                    <th>Total Score</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="student-data">
+                <!-- Data will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // JSON data
+        const studentData = [
+        {
+    "id": "001",
+    "name": "John Doe",
+    "math": 85,
+    "science": 90,
+    "english": 88,
+    "totalScore": 263,
+    "status": "Pass"
+  },
+  {
+    "id": "002",
+    "name": "Jane Smith",
+    "math": 70,
+    "science": 75,
+    "english": 80,
+    "totalScore": 225,
+    "status": "Pass"
+  },
+  {
+    "id": "003",
+    "name": "Sam Wilson",
+    "math": 50,
+    "science": 40,
+    "english": 60,
+    "totalScore": 150,
+    "status": "Fail"
+  },
+  {
+    "id": "004",
+    "name": "Alice Johnson",
+    "math": 95,
+    "science": 89,
+    "english": 94,
+    "totalScore": 278,
+    "status": "Pass"
+  },
+  {
+    "id": "005",
+    "name": "Bob Brown",
+    "math": 65,
+    "science": 60,
+    "english": 70,
+    "totalScore": 195,
+    "status": "Fail"
+  },
+  {
+    "id": "006",
+    "name": "Charlie Green",
+    "math": 78,
+    "science": 82,
+    "english": 85,
+    "totalScore": 245,
+    "status": "Pass"
+  },
+  {
+    "id": "007",
+    "name": "Diana White",
+    "math": 40,
+    "science": 50,
+    "english": 45,
+    "totalScore": 135,
+    "status": "Fail"
+  },
+  {
+    "id": "008",
+    "name": "Edward Black",
+    "math": 92,
+    "science": 88,
+    "english": 91,
+    "totalScore": 271,
+    "status": "Pass"
+  },
+  {
+    "id": "009",
+    "name": "Fiona Gray",
+    "math": 75,
+    "science": 78,
+    "english": 72,
+    "totalScore": 225,
+    "status": "Pass"
+  },
+  {
+    "id": "010",
+    "name": "George Hill",
+    "math": 55,
+    "science": 60,
+    "english": 58,
+    "totalScore": 173,
+    "status": "Fail"
+  },
+  {
+    "id": "011",
+    "name": "Hannah Brown",
+    "math": 88,
+    "science": 84,
+    "english": 90,
+    "totalScore": 262,
+    "status": "Pass"
+  },
+  {
+    "id": "012",
+    "name": "Ian Clark",
+    "math": 62,
+    "science": 65,
+    "english": 68,
+    "totalScore": 195,
+    "status": "Fail"
+  },
+  {
+    "id": "013",
+    "name": "Jack Davis",
+    "math": 89,
+    "science": 91,
+    "english": 87,
+    "totalScore": 267,
+    "status": "Pass"
+  },
+  {
+    "id": "014",
+    "name": "Kelly Evans",
+    "math": 77,
+    "science": 70,
+    "english": 75,
+    "totalScore": 222,
+    "status": "Pass"
+  },
+  {
+    "id": "015",
+    "name": "Leo Harris",
+    "math": 40,
+    "science": 35,
+    "english": 50,
+    "totalScore": 125,
+    "status": "Fail"
+  },
+  {
+    "id": "016",
+    "name": "Mary Wilson",
+    "math": 95,
+    "science": 96,
+    "english": 92,
+    "totalScore": 283,
+    "status": "Pass"
+  },
+  {
+    "id": "017",
+    "name": "Nate King",
+    "math": 68,
+    "science": 70,
+    "english": 66,
+    "totalScore": 204,
+    "status": "Fail"
+  },
+  {
+    "id": "018",
+    "name": "Olivia Moore",
+    "math": 80,
+    "science": 85,
+    "english": 83,
+    "totalScore": 248,
+    "status": "Pass"
+  },
+  {
+    "id": "019",
+    "name": "Peter Adams",
+    "math": 59,
+    "science": 61,
+    "english": 60,
+    "totalScore": 180,
+    "status": "Fail"
+  },
+  {
+    "id": "020",
+    "name": "Queen Foster",
+    "math": 91,
+    "science": 89,
+    "english": 95,
+    "totalScore": 275,
+    "status": "Pass"
+  },
+  {
+    "id": "021",
+    "name": "Ryan Green",
+    "math": 60,
+    "science": 63,
+    "english": 59,
+    "totalScore": 182,
+    "status": "Fail"
+  },
+  {
+    "id": "022",
+    "name": "Sophia Miller",
+    "math": 87,
+    "science": 85,
+    "english": 90,
+    "totalScore": 262,
+    "status": "Pass"
+  },
+  {
+    "id": "023",
+    "name": "Tom Scott",
+    "math": 78,
+    "science": 80,
+    "english": 76,
+    "totalScore": 234,
+    "status": "Pass"
+  },
+  {
+    "id": "024",
+    "name": "Uma Wright",
+    "math": 50,
+    "science": 45,
+    "english": 55,
+    "totalScore": 150,
+    "status": "Fail"
+  },
+  {
+    "id": "025",
+    "name": "Victor White",
+    "math": 92,
+    "science": 90,
+    "english": 88,
+    "totalScore": 270,
+    "status": "Pass"
+  },
+  {
+    "id": "026",
+    "name": "Wendy Black",
+    "math": 74,
+    "science": 72,
+    "english": 77,
+    "totalScore": 223,
+    "status": "Pass"
+  },
+  {
+    "id": "027",
+    "name": "Xander Hall",
+    "math": 60,
+    "science": 55,
+    "english": 62,
+    "totalScore": 177,
+    "status": "Fail"
+  },
+  {
+    "id": "028",
+    "name": "Yara Bell",
+    "math": 88,
+    "science": 90,
+    "english": 85,
+    "totalScore": 263,
+    "status": "Pass"
+  },
+  {
+    "id": "029",
+    "name": "Zack Taylor",
+    "math": 80,
+    "science": 85,
+    "english": 83,
+    "totalScore": 248,
+    "status": "Pass"
+  },
+  {
+    "id": "030",
+    "name": "Liam Ford",
+    "math": 72,
+    "science": 75,
+    "english": 70,
+    "totalScore": 217,
+    "status": "Pass"
+  }
+        ];
+
+        // Reference to the table body
+        const tbody = document.getElementById('student-data');
+
+        // Insert data into the table
+        studentData.forEach(student => {
+            const row = document.createElement('tr'); //ใช้ .forEach() เพื่อวนลูปแต่ละ วัตถุ (นักเรียนหนึ่งคน) ใน studentData สำหรับนักเรียนแต่ละคน จะสร้าง <tr> ใหม่เพื่อเก็บข้อมูลในแถวของตาราง
+            Object.values(student).forEach(value => {
+                const cell = document.createElement('td');
+                cell.textContent = value;
+                row.appendChild(cell);
+            });
+            tbody.appendChild(row); //เมื่อสร้าง <tr> และใส่ <td> ครบทุกช่องแล้ว จะเพิ่ม <tr> ลงไปใน <tbody> ของตาราง HTML โดยใช้ tbody.appendChild(row)
+        });
+    </script>
+</body>
+</html>

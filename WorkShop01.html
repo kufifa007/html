@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input,
+        button {
+            width: 95%;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+        }
+
+        input[type="color"] {
+            width: 60px;
+            height: 30px;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email">
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password">
+        
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number">
+        
+        <label for="website">Website:</label>
+        <input type="url" id="website" placeholder="https://example.com">
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob">
+        
+        <label for="appointment">Appointment:</label>
+        <input type="datetime-local" id="appointment">
+        
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time">
+        
+        <label for="month">Favorite Month:</label>
+        <input type="month" id="month">
+        
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color">
+
+        <br>
+        
+        <label for="satisfaction">Satisfaction Level:</label>
+        <input type="range" id="satisfaction" min="0" max="100" value="50">
+        
+        <div>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender">
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender">
+        </div>
+        
+        <div>
+            <label for="reading">Reading</label>
+            <input type="checkbox" id="reading">
+            <label for="traveling">Traveling</label>
+            <input type="checkbox" id="traveling">
+        </div>
+        
+        <label for="profile-picture">Profile Picture:</label>
+        <input type="file" id="profile-picture">
+        
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
